@@ -1,0 +1,8 @@
+修改固件区域，开启隐藏功能  
+0*1 MT2500 /dev/mmcblk0boot1  
+0*2ssh连接MT2500后输入：  
+echo 0 > /sys/block/mmcblk0boot1/force_ro  
+echo "US" | dd of=/dev/mmcblk0boot1 bs=1 seek=136  
+sync  
+reboot    
+0*3连接路由器后切换到繁体中文，切换区域成功  
